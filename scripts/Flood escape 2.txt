@@ -1,0 +1,5 @@
+--UI Library
+getgenv().Veranium = loadstring(game:HttpGet("http://ivyx.xyz/Veranium/VeraniumVXI.lua"))();
+--Actual Script
+loadstring(game:HttpGet("http://ivyx.xyz/DDReleases/FE2.lua"))();
+--Dont forget dont abuse claim button its kicking author this script added for this 7 secounds to wait

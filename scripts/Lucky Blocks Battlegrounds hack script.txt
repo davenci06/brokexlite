@@ -1,0 +1,321 @@
+game.Workspace.[YOURNAME].Humanoid.WalkSpeed = [NUMBER] --How fast you want to go
+game.Workspace.[YOURNAME].Humanoid.JumpPower = [NUMBER] --How high you want jump
+local LuckyGUI = Instance.new("ScreenGui")
+local ScriptBox = Instance.new("Frame")
+local ScriptHere = Instance.new("TextBox")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local GuiName = Instance.new("TextLabel")
+local CheckFE = Instance.new("TextButton")
+local ScriptBoxOpen = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local RainbowBlock = Instance.new("TextButton")
+local LuckyBlock = Instance.new("TextButton")
+local DiamondBlock = Instance.new("TextButton")
+local SuperBlock = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local Save = Instance.new("TextButton")
+local Load = Instance.new("TextButton")
+local ClickTP = Instance.new("TextButton")
+local TextLabel_4 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local OpenFrame = Instance.new("Frame")
+local TextButton_3 = Instance.new("TextButton")
+
+-- Properties
+
+LuckyGUI.Name = "Lucky GUI"
+LuckyGUI.Parent = game.Players.LocalPlayer.PlayerGui
+
+ScriptBox.Name = "ScriptBox"
+ScriptBox.Parent = LuckyGUI
+ScriptBox.Active = true
+ScriptBox.BackgroundColor3 = Color3.new(1, 1, 1)
+ScriptBox.BorderColor3 = Color3.new(1, 1, 1)
+ScriptBox.Position = UDim2.new(0.600886941, 0, 0.0904645473, 0)
+ScriptBox.Size = UDim2.new(0, 519, 0, 502)
+
+ScriptHere.Name = "ScriptHere"
+ScriptHere.Parent = ScriptBox
+ScriptHere.BackgroundColor3 = Color3.new(1, 1, 1)
+ScriptHere.BorderColor3 = Color3.new(1, 1, 1)
+ScriptHere.Position = UDim2.new(0, 0, -0.0119521916, 0)
+ScriptHere.Size = UDim2.new(0, 519, 0, 433)
+ScriptHere.Font = Enum.Font.SourceSans
+ScriptHere.Text = "Script Here.."
+ScriptHere.TextColor3 = Color3.new(0, 0, 0)
+ScriptHere.TextSize = 20
+
+TextButton.Parent = ScriptBox
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BorderColor3 = Color3.new(1, 0, 0)
+TextButton.BorderSizePixel = 3
+TextButton.Position = UDim2.new(0.527938366, 0, 0.862549782, 0)
+TextButton.Size = UDim2.new(0, 245, 0, 69)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Clear"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextSize = 14
+
+TextButton_2.Parent = ScriptBox
+TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_2.BorderColor3 = Color3.new(0.333333, 1, 0)
+TextButton_2.BorderSizePixel = 3
+TextButton_2.Position = UDim2.new(0, 0, 0.862549782, 0)
+TextButton_2.Size = UDim2.new(0, 242, 0, 69)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Execute"
+TextButton_2.TextColor3 = Color3.new(0, 0, 0)
+TextButton_2.TextSize = 14
+
+Main.Name = "Main"
+Main.Parent = LuckyGUI
+Main.Active = true
+Main.BackgroundColor3 = Color3.new(0.666667, 1, 0)
+Main.Position = UDim2.new(0, 70, 0, 68)
+Main.Size = UDim2.new(0, 492, 0, 589)
+
+GuiName.Name = "GuiName"
+GuiName.Parent = Main
+GuiName.BackgroundColor3 = Color3.new(1, 1, 1)
+GuiName.BackgroundTransparency = 1
+GuiName.BorderColor3 = Color3.new(1, 1, 1)
+GuiName.Position = UDim2.new(0.278455287, 0, 0, 0)
+GuiName.Size = UDim2.new(0, 200, 0, 50)
+GuiName.Font = Enum.Font.SourceSans
+GuiName.Text = "Lucky Gui"
+GuiName.TextColor3 = Color3.new(0, 0, 0)
+GuiName.TextSize = 25
+GuiName.TextStrokeColor3 = Color3.new(1, 1, 1)
+GuiName.TextStrokeTransparency = 0
+
+CheckFE.Name = "CheckFE"
+CheckFE.Parent = Main
+CheckFE.BackgroundColor3 = Color3.new(1, 1, 1)
+CheckFE.Position = UDim2.new(0.0792682767, 0, 0.724957645, 0)
+CheckFE.Size = UDim2.new(0, 169, 0, 50)
+CheckFE.Font = Enum.Font.SourceSans
+CheckFE.Text = "Check FE"
+CheckFE.TextColor3 = Color3.new(0, 0, 0)
+CheckFE.TextSize = 14
+
+ScriptBoxOpen.Name = "ScriptBoxOpen"
+ScriptBoxOpen.Parent = Main
+ScriptBoxOpen.BackgroundColor3 = Color3.new(1, 1, 1)
+ScriptBoxOpen.Position = UDim2.new(0.0792682767, 0, 0.62139219, 0)
+ScriptBoxOpen.Size = UDim2.new(0, 169, 0, 50)
+ScriptBoxOpen.Font = Enum.Font.SourceSans
+ScriptBoxOpen.Text = "Script Box"
+ScriptBoxOpen.TextColor3 = Color3.new(0, 0, 0)
+ScriptBoxOpen.TextSize = 14
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.579268277, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = ""
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 14
+
+TextLabel_2.Parent = Main
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.Position = UDim2.new(0.0467479825, 0, 0.53650254, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Extra"
+TextLabel_2.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_2.TextSize = 20
+
+RainbowBlock.Name = "RainbowBlock"
+RainbowBlock.Parent = Main
+RainbowBlock.BackgroundColor3 = Color3.new(1, 1, 1)
+RainbowBlock.Position = UDim2.new(0.308943093, 0, 0.117147684, 0)
+RainbowBlock.Size = UDim2.new(0, 169, 0, 50)
+RainbowBlock.Font = Enum.Font.SourceSans
+RainbowBlock.Text = "Rainbow Block"
+RainbowBlock.TextColor3 = Color3.new(0, 0, 0)
+RainbowBlock.TextSize = 14
+
+LuckyBlock.Name = "LuckyBlock"
+LuckyBlock.Parent = Main
+LuckyBlock.BackgroundColor3 = Color3.new(1, 1, 1)
+LuckyBlock.Position = UDim2.new(0.308943093, 0, 0.219015256, 0)
+LuckyBlock.Size = UDim2.new(0, 169, 0, 50)
+LuckyBlock.Font = Enum.Font.SourceSans
+LuckyBlock.Text = "Lucky Block"
+LuckyBlock.TextColor3 = Color3.new(0, 0, 0)
+LuckyBlock.TextSize = 14
+
+DiamondBlock.Name = "DiamondBlock"
+DiamondBlock.Parent = Main
+DiamondBlock.BackgroundColor3 = Color3.new(1, 1, 1)
+DiamondBlock.Position = UDim2.new(0.308943093, 0, 0.324278414, 0)
+DiamondBlock.Size = UDim2.new(0, 169, 0, 50)
+DiamondBlock.Font = Enum.Font.SourceSans
+DiamondBlock.Text = "Diamond Block"
+DiamondBlock.TextColor3 = Color3.new(0, 0, 0)
+DiamondBlock.TextSize = 14
+
+SuperBlock.Name = "SuperBlock"
+SuperBlock.Parent = Main
+SuperBlock.BackgroundColor3 = Color3.new(1, 1, 1)
+SuperBlock.Position = UDim2.new(0.308943093, 0, 0.426146001, 0)
+SuperBlock.Size = UDim2.new(0, 169, 0, 50)
+SuperBlock.Font = Enum.Font.SourceSans
+SuperBlock.Text = "Super Block"
+SuperBlock.TextColor3 = Color3.new(0, 0, 0)
+SuperBlock.TextSize = 14
+
+TextLabel_3.Parent = Main
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.Position = UDim2.new(0.278455287, 0, 0.0441426039, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Spawn Blocks"
+TextLabel_3.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_3.TextSize = 20
+
+Save.Name = "Save"
+Save.Parent = Main
+Save.BackgroundColor3 = Color3.new(1, 1, 1)
+Save.Position = UDim2.new(0.652438998, 0, 0.809847236, 0)
+Save.Size = UDim2.new(0, 138, 0, 50)
+Save.Font = Enum.Font.SourceSans
+Save.Text = "Save Tools"
+Save.TextColor3 = Color3.new(0, 0, 0)
+Save.TextSize = 14
+
+Load.Name = "Load"
+Load.Parent = Main
+Load.BackgroundColor3 = Color3.new(1, 1, 1)
+Load.Position = UDim2.new(0.652439058, 0, 0.904923618, 0)
+Load.Size = UDim2.new(0, 138, 0, 50)
+Load.Font = Enum.Font.SourceSans
+Load.Text = "Load Tools"
+Load.TextColor3 = Color3.new(0, 0, 0)
+Load.TextSize = 14
+
+ClickTP.Name = "ClickTP"
+ClickTP.Parent = Main
+ClickTP.BackgroundColor3 = Color3.new(1, 1, 1)
+ClickTP.Position = UDim2.new(0.0792682469, 0, 0.830220759, 0)
+ClickTP.Size = UDim2.new(0, 169, 0, 50)
+ClickTP.Font = Enum.Font.SourceSans
+ClickTP.Text = "ClickTP(press e)"
+ClickTP.TextColor3 = Color3.new(0, 0, 0)
+ClickTP.TextSize = 14
+
+TextLabel_4.Parent = Main
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.Position = UDim2.new(-0.0792683065, 0, 0.947368383, 0)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 37)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Credits: BararakSeika"
+TextLabel_4.TextColor3 = Color3.new(0, 0, 0)
+TextLabel_4.TextSize = 14
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.new(1, 1, 1)
+Close.Size = UDim2.new(0, 56, 0, 37)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.new(0, 0, 0)
+Close.TextSize = 14
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = LuckyGUI
+OpenFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+OpenFrame.Position = UDim2.new(0, 0, 0.877750576, 0)
+OpenFrame.Size = UDim2.new(0, 100, 0, 100)
+
+TextButton_3.Parent = OpenFrame
+TextButton_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_3.Size = UDim2.new(0, 100, 0, 100)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Open"
+TextButton_3.TextColor3 = Color3.new(0, 0, 0)
+TextButton_3.TextSize = 14
+
+-- Scripts
+RainbowBlock.MouseButton1Down:connect(function()
+game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+end)
+
+LuckyBlock.MouseButton1Down:connect(function()
+game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+end)
+
+SuperBlock.MouseButton1Down:connect(function()
+game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+end)
+
+DiamondBlock.MouseButton1Down:connect(function()
+game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+end)
+
+game.Players.LocalPlayer.PlayerGui["Lucky GUI"].ScriptBox.Visible = false
+
+Close.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.PlayerGui["Lucky GUI"].Main.Visible = false
+end)
+
+TextButton_3.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.PlayerGui["Lucky GUI"].Main.Visible = true
+end)
+
+ClickTP.MouseButton1Down:connect(function()
+plr = game.Players.LocalPlayer 
+hum = plr.Character.HumanoidRootPart
+mouse = plr:GetMouse() 
+mouse.KeyDown:connect(function(key) 
+if key == "e" then 
+if mouse.Target then 
+hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z) 
+end 
+end 
+end)
+end)
+
+Save.MouseButton1Down:connect(function()
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if (v:IsA("Tool")) then
+v.Parent = game.Players.LocalPlayer
+end
+end
+end)
+
+Load.MouseButton1Down:connect(function()
+for i,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+if (v:IsA("Tool")) then
+v.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+end)
+
+CheckFE.MouseButton1Down:connect(function()
+if game.Workspace.FilteringEnabled == true then
+TextLabel.Text = "Filtering Enabled"
+else
+TextLabel.Text = "Filtering Disabled"
+end
+end)
+
+ScriptBoxOpen.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.PlayerGui["Lucky GUI"].ScriptBox.Visible = true
+end)
+
+TextButton_2.MouseButton1Down:connect(function()
+loadstring(game.Players.LocalPlayer.PlayerGui["LuckyGUI"].ScriptBox.ScriptHere.Text)()
+end)
+
+TextButton.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.PlayerGui["LuckyGUI"].ScriptBox.ScriptHere.Text = ""
+end)

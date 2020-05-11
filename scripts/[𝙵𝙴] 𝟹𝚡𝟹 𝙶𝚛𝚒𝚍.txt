@@ -1,0 +1,72 @@
+--Cyclically's FE Tool Duplicate Tools V3
+--https://v3rmillion.net/member.php?action=profile&uid=785986
+
+local toolamount = 16
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+local characters = {}
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local renderstepped = runservice.RenderStepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    table.insert(characters, char)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.RenderStepped:Wait() until LocalPlayer.Character ~= nil
+end)
+repeat runservice.RenderStepped:Wait() until #LocalPlayer:GetChildren() - 4 - currentamount >= toolamount
+renderstepped:Disconnect()
+repeat runservice.RenderStepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+for _, char in pairs(characters) do
+    char:Destroy()
+end
+for _, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+tempchar:Destroy()
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(0,0,-1)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(0,0,-2)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(0,0,-3)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(0,0,-4)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(1,0,-1)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(1,0,-2)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(1,0,-3)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(1,0,-4)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(2,0,-1)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(2,0,-2)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(2,0,-3)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(2,0,-4)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(3,0,-1)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(3,0,-2)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(3,0,-3)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character
+game.Players.LocalPlayer.Backpack.Foil.GripPos = Vector3.new(3,0,-4)
+game.Players.LocalPlayer.Backpack.Foil.Parent = game.Players.LocalPlayer.Character

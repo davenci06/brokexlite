@@ -1,0 +1,77 @@
+--[[
+    Cyclically's FE Fencing Whirl
+    Credits to builderboy256 for being hackerman
+    After executing the script, please wait until you are able to move your character again.
+    https://v3rmillion.net/member.php?action=profile&uid=785986
+]]
+
+local toolamount = 100 -- How long the whirl is. 100 is recommended
+local whirlwide = 2 -- How wide the whirl is
+
+-- Don't edit script unless you know what you're doing. If you wanna add this into a script, please give credits and message me on discord that you added it in a script at Cyclically#4905
+
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local runservice = game:GetService("RunService")
+LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
+local currentamount = #LocalPlayer.Backpack:GetChildren()
+LocalPlayer.Character.Archivable = true
+local tempchar = LocalPlayer.Character:Clone()
+local lastchar = nil
+tempchar.Parent = workspace
+local savepos = LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+local Stepped = runservice.Stepped:Connect(function()
+    workspace.CurrentCamera.CameraSubject = tempchar:FindFirstChild("Humanoid")
+    for _, tool in pairs(LocalPlayer.Backpack:GetChildren()) do
+    if tool:IsA("Tool") then
+            tool.Parent = LocalPlayer
+        end
+    end
+    LocalPlayer.Character:ClearAllChildren()
+    local char = Instance.new("Model", workspace)
+    Instance.new("Humanoid", char)
+    LocalPlayer.Character = char
+    repeat runservice.Stepped:Wait() until LocalPlayer.Character ~= nil
+    lastchar = char
+end)
+repeat runservice.Stepped:Wait() until #LocalPlayer:GetChildren() - 3 - currentamount >= toolamount
+Stepped:Disconnect()
+repeat runservice.Stepped:Wait() until LocalPlayer.Character:FindFirstChild("HumanoidRootPart") ~= nil
+lastchar:Destroy()
+for index, tool in pairs(LocalPlayer:GetChildren()) do
+    if tool:IsA("Tool") then
+        tool.Parent = LocalPlayer.Backpack
+        tool.Handle.Massless = true
+        tool.Grip = CFrame.new(Vector3.new(-5, index * 0.1, -index * 0.01)) * CFrame.Angles(math.rad(-45), math.rad(index * (whirlwide * 0.1)), math.rad(index * 0.1) + (index * 4))
+        tool.Parent = LocalPlayer.Character
+        if tool.Handle:FindFirstChild("Mesh") ~= nil then
+            tool.Handle.Mesh:Destroy()
+        end
+    end
+end
+LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = savepos
+LocalPlayer.Character:FindFirstChild("Humanoid").HipHeight = whirlwide * 3
+tempchar:Destroy()
+
+
+
+for v,i in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if i:IsA("Tool") then
+i.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+
+repeat
+for v,i in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if i:IsA("Tool") then
+i.Grip = i.Grip * CFrame.Angles(math.rad(0),0,-1)
+i.Parent = game.Players.LocalPlayer.Character
+end
+end
+wait(toolamount/500)
+for v,i in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if i:IsA("Tool") then
+i.Grip = i.Grip * CFrame.Angles(math.rad(0),0,-1)
+i.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0

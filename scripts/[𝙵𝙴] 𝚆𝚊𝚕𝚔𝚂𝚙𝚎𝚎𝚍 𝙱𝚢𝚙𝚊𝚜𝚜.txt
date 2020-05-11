@@ -1,0 +1,14 @@
+Speed = "100"
+
+game:GetService("RunService").Stepped:connect(function()
+if Walking then
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = Speed
+end
+end)
+Walking = true
+repeat
+wait()
+until game.Players.LocalPlayer.Character.Humanoid.Health == 0
+if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+Walking = false
+end
